@@ -38,6 +38,12 @@ class PartnersController < ApplicationController
     end
   end
 
+  def destroy
+    @partner.destroy
+    flash[:notice] = "The partner has been destroyed."
+    redirect_to partners_path
+  end
+
   private
   def set_partner
     params.require(:partner).permit(:title, :address, :email, :phone)
