@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature "Create a partner" do |variable|
+feature "Create a partner" do
   before do
     visit '/'
     click_link "New Partner"

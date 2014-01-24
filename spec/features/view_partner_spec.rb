@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature "Show partner profile" do |variable|
+feature "Show partner profile" do
   let!(:partner) { FactoryGirl.create(:partner) }
 
   scenario "viewing partner's info" do |variable|

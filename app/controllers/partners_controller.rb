@@ -15,13 +15,27 @@ class PartnersController < ApplicationController
       flash[:notice] = "The partner has been successfully created."
       redirect_to partners_path
     else
-      flash[:notice] = "The partner has not been created."
+      flash[:alert] = "The partner has not been created."
       render 'new'
     end
   end
 
   def show
 
+  end
+
+  def edit
+    
+  end
+
+  def update
+    if @partner.update(set_partner)
+      flash[:notice] = "The partner has been successfully updated."
+      redirect_to @partner
+    else
+      flash[:alert] = "The partner has not been updated."
+      render 'edit'
+    end
   end
 
   private
