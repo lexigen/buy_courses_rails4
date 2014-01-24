@@ -1,0 +1,19 @@
+= form_for @partner do |f|
+  p
+    = f.label :title
+    = f.text_field :title
+
+  p
+    = f.label :address
+    = f.text_field :address
+
+  p
+    = f.label :email
+    = f.text_field :email
+
+  p
+    = f.label :phone
+    = f.text_field :phone
+
+  p = f.submit
+
