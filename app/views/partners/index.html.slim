@@ -1,8 +1,8 @@
 h1 Partners
 
 ul
-- @partners.each do |p|
+- @partners.each do |partner|
   li
-    = link_to p.title, p
+    = link_to partner.title, partner
     
 p= link_to "New Partner", new_partner_path

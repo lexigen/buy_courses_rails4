@@ -3,5 +3,8 @@ p= @partner.address
 p= @partner.email
 p= @partner.phone
 
+h3 Courses
+p = link_to "New Course", new_partner_course_path(@partner)
+
 p = link_to "Edit Partner", [:edit, @partner]
 p = link_to "Delete Partner", @partner, method: :delete, data: { confirm: "Are you sure?" }

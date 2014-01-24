@@ -1,6 +1,8 @@
 BuyCoursesRails4::Application.routes.draw do
 
-  resources :partners
+  resources :partners do
+    resources :courses
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
