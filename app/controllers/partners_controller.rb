@@ -1,5 +1,8 @@
 class PartnersController < ApplicationController
+  before_filter :find_partner, only: [:show, :edit, :update, :destroy]
+
   def index
+    @partners = Partner.all
   end
 
   def new
@@ -17,8 +20,19 @@ class PartnersController < ApplicationController
     end
   end
 
+  def show
+
+  end
+
   private
   def set_partner
     params.require(:partner).permit(:title, :address, :email, :phone)
+  end
+
+  def find_partner
+    @partner = Partner.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+    flash[:alert] = "The partner you were looking for does not exist."
+    redirect_to root_path
   end
 end
