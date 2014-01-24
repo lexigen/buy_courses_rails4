@@ -1,4 +1,10 @@
 = form_for @partner do |f|
+  - if @partner.errors.any?
+    | The following errors prevented partner from saving:
+    ul 
+    - @partner.errors.full_messages.each do |e|
+      li
+        = e
   p
     = f.label :title
     = f.text_field :title
