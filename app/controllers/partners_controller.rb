@@ -21,11 +21,11 @@ class PartnersController < ApplicationController
   end
 
   def show
-
+    #@courses = @partner.courses
   end
 
   def edit
-    
+    #to test jenkins
   end
 
   def update

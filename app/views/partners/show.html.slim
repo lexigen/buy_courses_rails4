@@ -4,6 +4,13 @@ p= @partner.email
 p= @partner.phone
 
 h3 Courses
+
+- if @courses.any?
+  ul
+  - @courses.each do |course|
+    li
+      = link_to course.title, [@partner, course] 
+
 p = link_to "New Course", new_partner_course_path(@partner)
 
 p = link_to "Edit Partner", [:edit, @partner]
