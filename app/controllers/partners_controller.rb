@@ -21,7 +21,7 @@ class PartnersController < ApplicationController
   end
 
   def show
-    #@courses = @partner.courses
+    @courses = @partner.courses
   end
 
   def edit
