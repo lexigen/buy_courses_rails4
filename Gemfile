@@ -1,10 +1,15 @@
 source 'https://rubygems.org'
+ruby '1.9.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
+gem 'rails_12factor'
+gem 'rails_stdout_logging'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#gem 'sqlite3'
+
+gem 'mysql2'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20140124150437) do
     t.datetime "updated_at"
   end
 
-  add_index "courses", ["partner_id"], name: "index_courses_on_partner_id"
+  add_index "courses", ["partner_id"], name: "index_courses_on_partner_id", using: :btree
 
   create_table "partners", force: true do |t|
     t.string   "title"
