@@ -6,3 +6,5 @@ applications:
   host: bc
   domain: 192.168.1.180.xip.io
   path: .
+  env:
+    DATABASE_URL: mysql2://user:mypassword@172.16.16.55:3306/buy_courses_development
